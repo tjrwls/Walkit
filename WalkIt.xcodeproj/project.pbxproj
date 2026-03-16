@@ -1,0 +1,1258 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C6504482F0C9E43006CA801 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2C6504472F0C9E43006CA801 /* FirebaseAnalytics */; };
+		2C65044A2F0C9E43006CA801 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 2C6504492F0C9E43006CA801 /* FirebaseMessaging */; };
+		6104B3692F02973F0069706A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6104B3682F02973F0069706A /* RealmSwift */; };
+		6104B3712F02A6B50069706A /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 6104B3682F02973F0069706A /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		612CBA5C2F07F1E300441791 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 612CBA5B2F07F1E300441791 /* Kingfisher */; };
+		614F16802EEC37ED00D15BDD /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 614F167F2EEC37ED00D15BDD /* KakaoSDKCommon */; };
+		614F16822EEC38BE00D15BDD /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 614F16812EEC38BE00D15BDD /* KakaoSDKUser */; };
+		618135102EF8349700D33435 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6181350F2EF8349700D33435 /* FirebaseCore */; };
+		61A1F4002EEC3FA0007E9D94 /* NidThirdPartyLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 61A1F3FF2EEC3FA0007E9D94 /* NidThirdPartyLogin */; };
+		61D1EFA62F0C222F00EB49BA /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 61D1EFA52F0C222F00EB49BA /* Lottie */; };
+		61DE02622F03F35100A2986D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 61DE02612F03F35100A2986D /* RealmSwift */; };
+		A48652CFADABE13AF52514D7 /* Pods_WalkIt_WalkItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D780BAC4F426FA263C7A1F /* Pods_WalkIt_WalkItUITests.framework */; };
+		BFEB87EA449859418BD64F3E /* Pods_WalkIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C87355CF48DA9999F9D6AE /* Pods_WalkIt.framework */; };
+		D2643D04241EE1B8FE2ACC91 /* Pods_WalkItTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431A6DC820F53428EE0231B5 /* Pods_WalkItTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		61E9FFBB2EE29983005194F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61E9FFA52EE29981005194F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61E9FFAC2EE29981005194F5;
+			remoteInfo = WalkIt;
+		};
+		61E9FFC52EE29983005194F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61E9FFA52EE29981005194F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61E9FFAC2EE29981005194F5;
+			remoteInfo = WalkIt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6105082B2EE2D13900301262 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6104B3712F02A6B50069706A /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		086B7BB1AB313E2D5BA86D94 /* Pods-WalkIt-WalkItUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkIt-WalkItUITests.debug.xcconfig"; path = "Target Support Files/Pods-WalkIt-WalkItUITests/Pods-WalkIt-WalkItUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3381DE1B2270264FE50CE68D /* Pods-WalkIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkIt.release.xcconfig"; path = "Target Support Files/Pods-WalkIt/Pods-WalkIt.release.xcconfig"; sourceTree = "<group>"; };
+		36FD1D47FD301A516B044275 /* Pods-WalkItTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkItTests.release.xcconfig"; path = "Target Support Files/Pods-WalkItTests/Pods-WalkItTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A0E00012F0D100000000001 /* WalkIt.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config/WalkIt.Debug.xcconfig"; sourceTree = SOURCE_ROOT; };
+		5A0E00022F0D100000000002 /* WalkIt.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config/WalkIt.Release.xcconfig"; sourceTree = SOURCE_ROOT; };
+		431A6DC820F53428EE0231B5 /* Pods_WalkItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalkItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D3204611754D77E93F45D3F /* Pods-WalkItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkItTests.debug.xcconfig"; path = "Target Support Files/Pods-WalkItTests/Pods-WalkItTests.debug.xcconfig"; sourceTree = "<group>"; };
+		61E9FFAD2EE29981005194F5 /* WalkIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61E9FFBA2EE29983005194F5 /* WalkItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61E9FFC42EE29983005194F5 /* WalkItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89D780BAC4F426FA263C7A1F /* Pods_WalkIt_WalkItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalkIt_WalkItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2C87355CF48DA9999F9D6AE /* Pods_WalkIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalkIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A696A90CC091CEBE6E943841 /* Pods-WalkIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkIt.debug.xcconfig"; path = "Target Support Files/Pods-WalkIt/Pods-WalkIt.debug.xcconfig"; sourceTree = "<group>"; };
+		E1C2F0B785FFEE816239730D /* Pods-WalkIt-WalkItUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkIt-WalkItUITests.release.xcconfig"; path = "Target Support Files/Pods-WalkIt-WalkItUITests/Pods-WalkIt-WalkItUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		61D1EF8B2F0C1DF400EB49BA /* Exceptions for "WalkIt" folder in "WalkIt" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				ETC/Extension.swift,
+				"GoogleService-Info.plist",
+				LottieJson/seed.json,
+				LottieJson/sprout.json,
+				LottieJson/tree.json,
+				Model/CharacterModel/CharacterData.swift,
+				Model/CharacterModel/CharacterInfo.swift,
+				Model/CharacterModel/CharacterInfoEntity.swift,
+				Model/CharacterModel/CosmeticItem.swift,
+				Model/CharacterModel/ItemPart.swift,
+				Model/CharacterModel/ItemTag.swift,
+				Model/EmotionBadge.swift,
+				Model/Enum/CharacterPart.swift,
+				Model/FCM/FCMDeleted.swift,
+				Model/FCM/FCMToken.swift,
+				Model/Follow/FolloStatus.swift,
+				Model/Follow/Follow.swift,
+				Model/Follow/Follower.swift,
+				Model/Follow/FollowerWalk.swift,
+				Model/Follow/SearchUsers.swift,
+				Model/Follow/UserWalkSummary.swift,
+				Model/Home/HomeResponse.swift,
+				Model/Home/Weather.swift,
+				Model/Notification/Notification.swift,
+				Model/Notification/NotificationSetting.swift,
+				Model/Route/HomeRoute.swift,
+				Model/Route/LoginRoute.swift,
+				Model/Route/MyPageRoute.swift,
+				Model/Route/WalkingRecordRoute.swift,
+				Model/Users/Goals.swift,
+				Model/Users/LoginResponse.swift,
+				Model/Users/OAuthUserData.swift,
+				Model/Users/Point.swift,
+				Model/Users/TabType.swift,
+				Model/Users/UserProfile.swift,
+				Model/Walk/WalkPoint.swift,
+				Model/Walk/WalkRecord.swift,
+				Model/Walk/WalkRecordEntity.swift,
+				Model/Walk/WalkSummary.swift,
+				Model/WeeklyMission.swift,
+				Protocol/AuthManagerProtocol.swift,
+				Servicee/AuthManager.swift,
+				Servicee/ImageDownloader.swift,
+				Servicee/KeychainManager.swift,
+				Servicee/LocationService.swift,
+				Servicee/LottieError.swift,
+				Servicee/LottieImageCache.swift,
+				Servicee/NetworkClient.swift,
+				Servicee/NotificationManager.swift,
+				Servicee/PedometerManager.swift,
+				Servicee/RealmManager.swift,
+				Servicee/ServerManager.swift,
+				Servicee/UserManager.swift,
+				View/CharacterView/CharacterItemsView.swift,
+				View/CharacterView/DressingRoomView.swift,
+				View/CharacterView/LottieCharacterView.swift,
+				View/Component/Button/CheckBoxTextButton.swift,
+				View/Component/Button/EnableNavigationLink.swift,
+				View/Component/Button/FilledActionButton.swift,
+				View/Component/Button/OutlineActionButton.swift,
+				View/Component/Button/TabBarButton.swift,
+				View/Component/CardView/EmotionCardView.swift,
+				View/Component/CardView/MissionCard.swift,
+				View/Component/CardView/WalkCard.swift,
+				View/Component/EmotionSlider.swift,
+				View/Component/GradientLinearSpinner.swift,
+				View/Component/KakaoMap/KakaoMapView.swift,
+				View/Component/Modifier/CapsuleTagModifier.swift,
+				View/Component/Modifier/ToastModifier.swift,
+				View/Component/Picker/CameraPicker.swift,
+				View/Component/Picker/CustomCompactWheelPicker.swift,
+				View/Component/Picker/WheelPicker.swift,
+				View/Component/Shape/CircleView.swift,
+				View/Component/Shape/CoordinatePathView.swift,
+				View/Component/Shape/FolderTabShape.swift,
+				View/Component/Shape/MyCardShape.swift,
+				View/Component/Shape/RoundedCorners.swift,
+				View/Component/Shape/TopRoundedShape.swift,
+				View/Component/Shape/Triangle.swift,
+				View/Component/WeeklyEmotionView.swift,
+				View/Home/CheckRecordingView.swift,
+				View/Home/EmotionAfterWalkView.swift,
+				View/Home/EmotionBeforeWalkView.swift,
+				View/Home/EmotionSlelectView.swift,
+				View/Home/HomeView.swift,
+				View/Home/WalkingView.swift,
+				View/Home/WalkRecordRootView.swift,
+				View/Home/WalkRecordView.swift,
+				View/Login/LoginView.swift,
+				View/Login/SignUp/BirthYearView.swift,
+				View/Login/SignUp/CreateCharacterView.swift,
+				View/Login/SignUp/GoalSettingView.swift,
+				View/Login/SignUp/SignUpView.swift,
+				View/MainTabView.swift,
+				View/MyPage/AlimManagerView.swift,
+				View/MyPage/EditUserInfoView.swift,
+				View/MyPage/GoalsManagerView.swift,
+				View/MyPage/MissionManagerView.swift,
+				View/MyPage/MyPageView.swift,
+				View/WalkingRecord/Calendar/DayView.swift,
+				View/WalkingRecord/Calendar/MonthView.swift,
+				View/WalkingRecord/Calendar/WeekView.swift,
+				View/WalkingRecord/ContentView.swift,
+				View/WalkingRecord/Follow/FollowInfoView.swift,
+				View/WalkingRecord/Follow/FollowListView.swift,
+				View/WalkingRecord/Follow/FollowRequestView.swift,
+				View/WalkingRecord/Follow/FollowView.swift,
+				View/WalkingRecord/NotificationView.swift,
+				View/WalkingRecord/WalkingRecordView.swift,
+				View/WalkingRecord/WalkItCountView.swift,
+				View/WalkingRecord/YearMonthWheelPicker.swift,
+				ViewModel/Character/DressingRoomViewModel.swift,
+				ViewModel/Home/HomeViewModel.swift,
+				ViewModel/Home/WalkViewModel.swift,
+				ViewModel/Login/LoginViewModel.swift,
+				ViewModel/Login/SignUpViewModel.swift,
+				ViewModel/MyPage/AlimManagerViewModel.swift,
+				ViewModel/MyPage/EditUserInfoViewModel.swift,
+				ViewModel/MyPage/GoalsManagerViewModel.swift,
+				ViewModel/MyPage/MaPageViewModel.swift,
+				ViewModel/MyPage/MissionManagerViewModel.swift,
+				ViewModel/WalkingRecord/FollowInfoViewModel.swift,
+				ViewModel/WalkingRecord/FollowListViewModel.swift,
+				ViewModel/WalkingRecord/FollowRequestViewModel.swift,
+				ViewModel/WalkingRecord/NotificationViewModel.swift,
+				ViewModel/WalkingRecord/WalkingRecordViewModel.swift,
+				WalkItApp.swift,
+			);
+			target = 61E9FFAC2EE29981005194F5 /* WalkIt */;
+		};
+		61D1EF8C2F0C1DF400EB49BA /* Exceptions for "WalkIt" folder in "WalkItTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				ETC/Extension.swift,
+				ETC/Log.swift,
+				"GoogleService-Info.plist",
+				Info.plist,
+				LottieJson/seed.json,
+				LottieJson/sprout.json,
+				LottieJson/tree.json,
+				Model/CharacterModel/CharacterData.swift,
+				Model/CharacterModel/CharacterInfo.swift,
+				Model/CharacterModel/CharacterInfoEntity.swift,
+				Model/CharacterModel/CosmeticItem.swift,
+				Model/CharacterModel/ItemPart.swift,
+				Model/CharacterModel/ItemTag.swift,
+				Model/EmotionBadge.swift,
+				Model/Enum/CharacterPart.swift,
+				Model/FCM/FCMDeleted.swift,
+				Model/FCM/FCMToken.swift,
+				Model/Follow/FolloStatus.swift,
+				Model/Follow/Follow.swift,
+				Model/Follow/Follower.swift,
+				Model/Follow/FollowerWalk.swift,
+				Model/Follow/SearchUsers.swift,
+				Model/Follow/UserWalkSummary.swift,
+				Model/Home/HomeResponse.swift,
+				Model/Home/Weather.swift,
+				Model/Notification/Notification.swift,
+				Model/Notification/NotificationSetting.swift,
+				Model/Route/HomeRoute.swift,
+				Model/Route/LoginRoute.swift,
+				Model/Route/MyPageRoute.swift,
+				Model/Route/WalkingRecordRoute.swift,
+				Model/Users/Goals.swift,
+				Model/Users/LoginResponse.swift,
+				Model/Users/OAuthUserData.swift,
+				Model/Users/Point.swift,
+				Model/Users/TabType.swift,
+				Model/Users/UserProfile.swift,
+				Model/Walk/WalkPoint.swift,
+				Model/Walk/WalkRecord.swift,
+				Model/Walk/WalkRecordEntity.swift,
+				Model/Walk/WalkSummary.swift,
+				Model/WeeklyMission.swift,
+				Protocol/AuthManagerProtocol.swift,
+				Servicee/AuthManager.swift,
+				Servicee/ImageDownloader.swift,
+				Servicee/KeychainManager.swift,
+				Servicee/LocationService.swift,
+				Servicee/LottieError.swift,
+				Servicee/LottieImageCache.swift,
+				Servicee/NetworkClient.swift,
+				Servicee/NotificationManager.swift,
+				Servicee/PedometerManager.swift,
+				Servicee/RealmManager.swift,
+				Servicee/ServerManager.swift,
+				Servicee/UserManager.swift,
+				View/CharacterView/CharacterItemsView.swift,
+				View/CharacterView/DressingRoomView.swift,
+				View/CharacterView/LottieCharacterView.swift,
+				View/Component/Button/CheckBoxTextButton.swift,
+				View/Component/Button/EnableNavigationLink.swift,
+				View/Component/Button/FilledActionButton.swift,
+				View/Component/Button/OutlineActionButton.swift,
+				View/Component/Button/TabBarButton.swift,
+				View/Component/CardView/EmotionCardView.swift,
+				View/Component/CardView/MissionCard.swift,
+				View/Component/CardView/WalkCard.swift,
+				View/Component/EmotionSlider.swift,
+				View/Component/GradientLinearSpinner.swift,
+				View/Component/KakaoMap/KakaoMapView.swift,
+				View/Component/Modifier/CapsuleTagModifier.swift,
+				View/Component/Modifier/ToastModifier.swift,
+				View/Component/Picker/CameraPicker.swift,
+				View/Component/Picker/CustomCompactWheelPicker.swift,
+				View/Component/Picker/WheelPicker.swift,
+				View/Component/Shape/CircleView.swift,
+				View/Component/Shape/CoordinatePathView.swift,
+				View/Component/Shape/FolderTabShape.swift,
+				View/Component/Shape/MyCardShape.swift,
+				View/Component/Shape/RoundedCorners.swift,
+				View/Component/Shape/TopRoundedShape.swift,
+				View/Component/Shape/Triangle.swift,
+				View/Component/WeeklyEmotionView.swift,
+				View/Home/CheckRecordingView.swift,
+				View/Home/EmotionAfterWalkView.swift,
+				View/Home/EmotionBeforeWalkView.swift,
+				View/Home/EmotionSlelectView.swift,
+				View/Home/HomeView.swift,
+				View/Home/WalkingView.swift,
+				View/Home/WalkRecordRootView.swift,
+				View/Home/WalkRecordView.swift,
+				View/Login/LoginView.swift,
+				View/Login/SignUp/BirthYearView.swift,
+				View/Login/SignUp/CreateCharacterView.swift,
+				View/Login/SignUp/GoalSettingView.swift,
+				View/Login/SignUp/SignUpView.swift,
+				View/MainTabView.swift,
+				View/MyPage/AlimManagerView.swift,
+				View/MyPage/EditUserInfoView.swift,
+				View/MyPage/GoalsManagerView.swift,
+				View/MyPage/MissionManagerView.swift,
+				View/MyPage/MyPageView.swift,
+				View/WalkingRecord/Calendar/DayView.swift,
+				View/WalkingRecord/Calendar/MonthView.swift,
+				View/WalkingRecord/Calendar/WeekView.swift,
+				View/WalkingRecord/ContentView.swift,
+				View/WalkingRecord/Follow/FollowInfoView.swift,
+				View/WalkingRecord/Follow/FollowListView.swift,
+				View/WalkingRecord/Follow/FollowRequestView.swift,
+				View/WalkingRecord/Follow/FollowView.swift,
+				View/WalkingRecord/NotificationView.swift,
+				View/WalkingRecord/WalkingRecordView.swift,
+				View/WalkingRecord/WalkItCountView.swift,
+				View/WalkingRecord/YearMonthWheelPicker.swift,
+				ViewModel/Character/DressingRoomViewModel.swift,
+				ViewModel/Home/HomeViewModel.swift,
+				ViewModel/Home/WalkViewModel.swift,
+				ViewModel/Login/LoginViewModel.swift,
+				ViewModel/Login/SignUpViewModel.swift,
+				ViewModel/MyPage/AlimManagerViewModel.swift,
+				ViewModel/MyPage/EditUserInfoViewModel.swift,
+				ViewModel/MyPage/GoalsManagerViewModel.swift,
+				ViewModel/MyPage/MaPageViewModel.swift,
+				ViewModel/MyPage/MissionManagerViewModel.swift,
+				ViewModel/WalkingRecord/FollowInfoViewModel.swift,
+				ViewModel/WalkingRecord/FollowListViewModel.swift,
+				ViewModel/WalkingRecord/FollowRequestViewModel.swift,
+				ViewModel/WalkingRecord/NotificationViewModel.swift,
+				ViewModel/WalkingRecord/WalkingRecordViewModel.swift,
+				WalkItApp.swift,
+			);
+			target = 61E9FFB92EE29983005194F5 /* WalkItTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		61D1EF2A2F0C1DF300EB49BA /* WalkIt */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				61D1EF8B2F0C1DF400EB49BA /* Exceptions for "WalkIt" folder in "WalkIt" target */,
+				61D1EF8C2F0C1DF400EB49BA /* Exceptions for "WalkIt" folder in "WalkItTests" target */,
+			);
+			path = WalkIt;
+			sourceTree = "<group>";
+		};
+		61E9FFBD2EE29983005194F5 /* WalkItTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WalkItTests;
+			sourceTree = "<group>";
+		};
+		61E9FFC72EE29983005194F5 /* WalkItUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WalkItUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61E9FFAA2EE29981005194F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6104B3692F02973F0069706A /* RealmSwift in Frameworks */,
+				614F16802EEC37ED00D15BDD /* KakaoSDKCommon in Frameworks */,
+				61D1EFA62F0C222F00EB49BA /* Lottie in Frameworks */,
+				61DE02622F03F35100A2986D /* RealmSwift in Frameworks */,
+				618135102EF8349700D33435 /* FirebaseCore in Frameworks */,
+				612CBA5C2F07F1E300441791 /* Kingfisher in Frameworks */,
+				61A1F4002EEC3FA0007E9D94 /* NidThirdPartyLogin in Frameworks */,
+				BFEB87EA449859418BD64F3E /* Pods_WalkIt.framework in Frameworks */,
+				2C6504482F0C9E43006CA801 /* FirebaseAnalytics in Frameworks */,
+				2C65044A2F0C9E43006CA801 /* FirebaseMessaging in Frameworks */,
+				614F16822EEC38BE00D15BDD /* KakaoSDKUser in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61E9FFB72EE29983005194F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2643D04241EE1B8FE2ACC91 /* Pods_WalkItTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61E9FFC12EE29983005194F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A48652CFADABE13AF52514D7 /* Pods_WalkIt_WalkItUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		61E9FFA42EE29981005194F5 = {
+			isa = PBXGroup;
+			children = (
+				61E9FFBD2EE29983005194F5 /* WalkItTests */,
+				61E9FFC72EE29983005194F5 /* WalkItUITests */,
+				61E9FFAE2EE29981005194F5 /* Products */,
+				E7F7A3D6DFEFE741C1E1F8EB /* Frameworks */,
+				CF3F3AA8FDF3A9CC90EA5D16 /* Pods */,
+				61D1EF2A2F0C1DF300EB49BA /* WalkIt */,
+			);
+			sourceTree = "<group>";
+		};
+		61E9FFAE2EE29981005194F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61E9FFAD2EE29981005194F5 /* WalkIt.app */,
+				61E9FFBA2EE29983005194F5 /* WalkItTests.xctest */,
+				61E9FFC42EE29983005194F5 /* WalkItUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF3F3AA8FDF3A9CC90EA5D16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A696A90CC091CEBE6E943841 /* Pods-WalkIt.debug.xcconfig */,
+				3381DE1B2270264FE50CE68D /* Pods-WalkIt.release.xcconfig */,
+				086B7BB1AB313E2D5BA86D94 /* Pods-WalkIt-WalkItUITests.debug.xcconfig */,
+				E1C2F0B785FFEE816239730D /* Pods-WalkIt-WalkItUITests.release.xcconfig */,
+				5D3204611754D77E93F45D3F /* Pods-WalkItTests.debug.xcconfig */,
+				36FD1D47FD301A516B044275 /* Pods-WalkItTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E7F7A3D6DFEFE741C1E1F8EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2C87355CF48DA9999F9D6AE /* Pods_WalkIt.framework */,
+				89D780BAC4F426FA263C7A1F /* Pods_WalkIt_WalkItUITests.framework */,
+				431A6DC820F53428EE0231B5 /* Pods_WalkItTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		61E9FFAC2EE29981005194F5 /* WalkIt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61E9FFCE2EE29983005194F5 /* Build configuration list for PBXNativeTarget "WalkIt" */;
+			buildPhases = (
+				1642DBBAAB78F59CE65732F4 /* [CP] Check Pods Manifest.lock */,
+				61E9FFA92EE29981005194F5 /* Sources */,
+				61E9FFAA2EE29981005194F5 /* Frameworks */,
+				61E9FFAB2EE29981005194F5 /* Resources */,
+				6105082B2EE2D13900301262 /* Embed Frameworks */,
+				46149AE3F5E15C8ED4320AD1 /* [CP] Embed Pods Frameworks */,
+				AA5028E1421FEF0A3758C85B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WalkIt;
+			productName = WalkIt;
+			productReference = 61E9FFAD2EE29981005194F5 /* WalkIt.app */;
+			productType = "com.apple.product-type.application";
+		};
+		61E9FFB92EE29983005194F5 /* WalkItTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61E9FFD12EE29983005194F5 /* Build configuration list for PBXNativeTarget "WalkItTests" */;
+			buildPhases = (
+				8643BB4C014F60F473B8AA98 /* [CP] Check Pods Manifest.lock */,
+				61E9FFB62EE29983005194F5 /* Sources */,
+				61E9FFB72EE29983005194F5 /* Frameworks */,
+				61E9FFB82EE29983005194F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61E9FFBC2EE29983005194F5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				61D1EF2A2F0C1DF300EB49BA /* WalkIt */,
+				61E9FFBD2EE29983005194F5 /* WalkItTests */,
+			);
+			name = WalkItTests;
+			productName = WalkItTests;
+			productReference = 61E9FFBA2EE29983005194F5 /* WalkItTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		61E9FFC32EE29983005194F5 /* WalkItUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61E9FFD42EE29983005194F5 /* Build configuration list for PBXNativeTarget "WalkItUITests" */;
+			buildPhases = (
+				6CD278EC47BCA7B7522750B1 /* [CP] Check Pods Manifest.lock */,
+				61E9FFC02EE29983005194F5 /* Sources */,
+				61E9FFC12EE29983005194F5 /* Frameworks */,
+				61E9FFC22EE29983005194F5 /* Resources */,
+				5B5194A9550EB6B814CDD161 /* [CP] Embed Pods Frameworks */,
+				C236BE8B44711AA15A24BF12 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61E9FFC62EE29983005194F5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				61E9FFC72EE29983005194F5 /* WalkItUITests */,
+			);
+			name = WalkItUITests;
+			productName = WalkItUITests;
+			productReference = 61E9FFC42EE29983005194F5 /* WalkItUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61E9FFA52EE29981005194F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2610;
+				LastUpgradeCheck = 2610;
+				TargetAttributes = {
+					61E9FFAC2EE29981005194F5 = {
+						CreatedOnToolsVersion = 26.1.1;
+					};
+					61E9FFB92EE29983005194F5 = {
+						CreatedOnToolsVersion = 26.1.1;
+						TestTargetID = 61E9FFAC2EE29981005194F5;
+					};
+					61E9FFC32EE29983005194F5 = {
+						CreatedOnToolsVersion = 26.1.1;
+						TestTargetID = 61E9FFAC2EE29981005194F5;
+					};
+				};
+			};
+			buildConfigurationList = 61E9FFA82EE29981005194F5 /* Build configuration list for PBXProject "WalkIt" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 61E9FFA42EE29981005194F5;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6105082C2EE2F39200301262 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				61A1F3FE2EEC3E0D007E9D94 /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios-swift" */,
+				6181350E2EF8315E00D33435 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				61DE02602F03F35100A2986D /* XCRemoteSwiftPackageReference "realm-swift" */,
+				612CBA5A2F07F1E300441791 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				61D1EFA42F0C222F00EB49BA /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 61E9FFAE2EE29981005194F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61E9FFAC2EE29981005194F5 /* WalkIt */,
+				61E9FFB92EE29983005194F5 /* WalkItTests */,
+				61E9FFC32EE29983005194F5 /* WalkItUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61E9FFAB2EE29981005194F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61E9FFB82EE29983005194F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61E9FFC22EE29983005194F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1642DBBAAB78F59CE65732F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WalkIt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46149AE3F5E15C8ED4320AD1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkIt/Pods-WalkIt-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkIt/Pods-WalkIt-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WalkIt/Pods-WalkIt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B5194A9550EB6B814CDD161 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkIt-WalkItUITests/Pods-WalkIt-WalkItUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkIt-WalkItUITests/Pods-WalkIt-WalkItUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WalkIt-WalkItUITests/Pods-WalkIt-WalkItUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CD278EC47BCA7B7522750B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WalkIt-WalkItUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8643BB4C014F60F473B8AA98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WalkItTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA5028E1421FEF0A3758C85B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkIt/Pods-WalkIt-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkIt/Pods-WalkIt-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WalkIt/Pods-WalkIt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C236BE8B44711AA15A24BF12 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkIt-WalkItUITests/Pods-WalkIt-WalkItUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkIt-WalkItUITests/Pods-WalkIt-WalkItUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WalkIt-WalkItUITests/Pods-WalkIt-WalkItUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61E9FFA92EE29981005194F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61E9FFB62EE29983005194F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61E9FFC02EE29983005194F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		61E9FFBC2EE29983005194F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61E9FFAC2EE29981005194F5 /* WalkIt */;
+			targetProxy = 61E9FFBB2EE29983005194F5 /* PBXContainerItemProxy */;
+		};
+		61E9FFC62EE29983005194F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61E9FFAC2EE29981005194F5 /* WalkIt */;
+			targetProxy = 61E9FFC52EE29983005194F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		61E9FFCC2EE29983005194F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3PVV8DQPL6;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_ENABLE_EXPLICIT_MODULES = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		61E9FFCD2EE29983005194F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3PVV8DQPL6;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_ENABLE_EXPLICIT_MODULES = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		61E9FFCF2EE29983005194F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A0E00012F0D100000000001 /* WalkIt.Debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = WalkIt/WalkIt.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1.3;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3TF2M45P38;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WalkIt/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Walk IT";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSCameraUsageDescription = "산책 중 만난 풍경이나 순간을 촬영하여 산책 경로와 함께 사진으로 기록하고 감정 기록에 첨부할 수 있도록 카메라 접근이 필요합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자가 산책을 시작한 경우, 앱이 백그라운드 상태여도 이동 경로를 끊김 없이 기록하기 위해 항상 위치 접근이 필요합니다.\n";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "산책 중 이동 경로를 기록하기 위해 위치 정보가 필요합니다.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "산책을 시작한 경우 걸음 수 측정을 위해 사용됩니다.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "산책 경로와 감정을 기록한 사진을 라이브러리에 저장하기 위해 필요합니다.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swyp.WalkIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_ENABLE_EXPLICIT_MODULES = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		61E9FFD02EE29983005194F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A0E00022F0D100000000002 /* WalkIt.Release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = WalkIt/WalkIt.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1.3;
+				DEVELOPMENT_TEAM = 3TF2M45P38;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WalkIt/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Walk IT";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSCameraUsageDescription = "산책 중 만난 풍경이나 순간을 촬영하여 산책 경로와 함께 사진으로 기록하고 감정 기록에 첨부할 수 있도록 카메라 접근이 필요합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자가 산책을 시작한 경우, 앱이 백그라운드 상태여도 이동 경로를 끊김 없이 기록하기 위해 항상 위치 접근이 필요합니다.\n";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "산책 중 이동 경로를 기록하기 위해 위치 정보가 필요합니다.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "산책을 시작한 경우 걸음 수 측정을 위해 사용됩니다.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "산책 경로와 감정을 기록한 사진을 라이브러리에 저장하기 위해 필요합니다.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swyp.WalkIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_ENABLE_EXPLICIT_MODULES = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		61E9FFD22EE29983005194F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D3204611754D77E93F45D3F /* Pods-WalkItTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3PVV8DQPL6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swyg.walkit.WalkItTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalkIt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WalkIt";
+			};
+			name = Debug;
+		};
+		61E9FFD32EE29983005194F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36FD1D47FD301A516B044275 /* Pods-WalkItTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3PVV8DQPL6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swyg.walkit.WalkItTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalkIt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WalkIt";
+			};
+			name = Release;
+		};
+		61E9FFD52EE29983005194F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 086B7BB1AB313E2D5BA86D94 /* Pods-WalkIt-WalkItUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3PVV8DQPL6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swyg.walkit.WalkItUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WalkIt;
+			};
+			name = Debug;
+		};
+		61E9FFD62EE29983005194F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1C2F0B785FFEE816239730D /* Pods-WalkIt-WalkItUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3PVV8DQPL6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swyg.walkit.WalkItUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WalkIt;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		61E9FFA82EE29981005194F5 /* Build configuration list for PBXProject "WalkIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61E9FFCC2EE29983005194F5 /* Debug */,
+				61E9FFCD2EE29983005194F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61E9FFCE2EE29983005194F5 /* Build configuration list for PBXNativeTarget "WalkIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61E9FFCF2EE29983005194F5 /* Debug */,
+				61E9FFD02EE29983005194F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61E9FFD12EE29983005194F5 /* Build configuration list for PBXNativeTarget "WalkItTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61E9FFD22EE29983005194F5 /* Debug */,
+				61E9FFD32EE29983005194F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61E9FFD42EE29983005194F5 /* Build configuration list for PBXNativeTarget "WalkItUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61E9FFD52EE29983005194F5 /* Debug */,
+				61E9FFD62EE29983005194F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6104B3672F02973F0069706A /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		6105082C2EE2F39200301262 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.26.0;
+			};
+		};
+		612CBA5A2F07F1E300441791 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.6.2;
+			};
+		};
+		6181350E2EF8315E00D33435 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.7.0;
+			};
+		};
+		61A1F3FE2EEC3E0D007E9D94 /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/naver/naveridlogin-sdk-ios-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+		61D1EFA42F0C222F00EB49BA /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.2;
+			};
+		};
+		61DE02602F03F35100A2986D /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2C6504472F0C9E43006CA801 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6181350E2EF8315E00D33435 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		2C6504492F0C9E43006CA801 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6181350E2EF8315E00D33435 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		6104B3682F02973F0069706A /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6104B3672F02973F0069706A /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		612CBA5B2F07F1E300441791 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 612CBA5A2F07F1E300441791 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		614F167F2EEC37ED00D15BDD /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6105082C2EE2F39200301262 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		614F16812EEC38BE00D15BDD /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6105082C2EE2F39200301262 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
+		};
+		6181350F2EF8349700D33435 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6181350E2EF8315E00D33435 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		61A1F3FF2EEC3FA0007E9D94 /* NidThirdPartyLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61A1F3FE2EEC3E0D007E9D94 /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios-swift" */;
+			productName = NidThirdPartyLogin;
+		};
+		61D1EFA52F0C222F00EB49BA /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61D1EFA42F0C222F00EB49BA /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		61DE02612F03F35100A2986D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61DE02602F03F35100A2986D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 61E9FFA52EE29981005194F5 /* Project object */;
+}

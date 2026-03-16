@@ -1,0 +1,16 @@
+PODS:
+  - KakaoMapsSDK (2.12.0)
+
+DEPENDENCIES:
+  - KakaoMapsSDK (= 2.12.0)
+
+SPEC REPOS:
+  trunk:
+    - KakaoMapsSDK
+
+SPEC CHECKSUMS:
+  KakaoMapsSDK: e0e59bff2bb3ee933b7d50bed9e026916f68aae5
+
+PODFILE CHECKSUM: 7ed3e7cf2c1781727dcf3e4dd03569300abd7d0b
+
+COCOAPODS: 1.16.2
