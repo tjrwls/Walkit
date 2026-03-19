@@ -87,18 +87,6 @@ final class ServerManager {
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         try await networkClient.requestVoid(request)
     }
-
-    // 예시: 프로필 조회 API
-    func fetchUserProfile(token: String) async throws -> UserProfile {
-        guard let url = URL(string: "https://your-backend.com/api/profile") else {
-            throw NetworkError.invalidURL
-        }
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-        return try await networkClient.request(request, responseType: UserProfile.self)
-    }
     
     func postUsersPolicy(token: String, termsAgreed: Bool, privacyAgreed: Bool, locationAgreed: Bool, marketingConsent: Bool) async throws {
         guard let url = URL(string: baseURL + "/users/policy") else {
@@ -851,4 +839,3 @@ private extension Data {
         }
     }
 }
-
