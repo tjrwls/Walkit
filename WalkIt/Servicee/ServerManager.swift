@@ -20,7 +20,6 @@ final class ServerManager {
 
     // 예시: 로그인 API
     func login(with provider: String, token: String) async throws -> LoginResponse {
-        debugPrint("로그인 token: \(token)")
         guard let url = URL(string: baseURL + "/auth/\(provider)") else {
             throw NetworkError.invalidURL
         }
@@ -38,7 +37,6 @@ final class ServerManager {
     }
     
     func logOut(token: String) async throws {
-        debugPrint("로그아웃 token: \(token)")
         guard let url = URL(string: baseURL + "/auth/logout") else {
             throw NetworkError.invalidURL
         }
@@ -52,7 +50,6 @@ final class ServerManager {
     }
     
     func refreshToken(accessToken: String, refreshToken: String) async throws -> LoginResponse {
-        debugPrint("리프레쉬 token: \(refreshToken)")
         guard let url = URL(string: baseURL + "/auth/refresh") else {
             throw NetworkError.invalidURL
         }
@@ -70,7 +67,6 @@ final class ServerManager {
     }
     
     func cancelMembership(token: String, nickName: String, birthDate: String) async throws {
-        debugPrint("회원탈퇴 token: \(token)")
         guard let url = URL(string: baseURL + "/users") else {
             throw NetworkError.invalidURL
         }

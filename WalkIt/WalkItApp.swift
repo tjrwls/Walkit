@@ -13,17 +13,23 @@ import KakaoSDKAuth
 import FirebaseCore
 import FirebaseMessaging
 
+private enum AppConfiguration {
+    static func string(for key: String) -> String {
+        guard let value = Bundle.main.object(forInfoDictionaryKey: key) as? String,
+              !value.isEmpty else {
+            fatalError("\(key) is missing in Info.plist")
+        }
+        return value
+    }
+}
+
 @main
 struct WalkItApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var authManager = AuthManager.shared
     init() {
 #if !targetEnvironment(simulator)
-        if let kakaoAppKey = Bundle.main.object(forInfoDictionaryKey: "KAKAO_APP_KEY") as? String {
-            KakaoSDK.initSDK(appKey: kakaoAppKey)
-        } else {
-            fatalError("Kakao App Key is missing in Info.plist")
-        }
+        KakaoSDK.initSDK(appKey: AppConfiguration.string(for: "KAKAO_APP_KEY"))
 #endif
         
     }
@@ -88,12 +94,13 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         debugPrint("AppDelegate didFinishLaunching")
 #if !targetEnvironment(simulator)
-        if let kakaoAppKey = Bundle.main.object(forInfoDictionaryKey: "KAKAO_APP_KEY") as? String {
-            SDKInitializer.InitSDK(appKey: kakaoAppKey)
-        } else {
-            fatalError("Kakao App Key is missing in Info.plist")
-        }
-        NidOAuth.shared.initialize(appName: "walkit", clientId: "pqYCAiLlppKm8_M3VnNA", clientSecret: "V_NACUpG7I", urlScheme: "com.swyp.WalkIt")
+        SDKInitializer.InitSDK(appKey: AppConfiguration.string(for: "KAKAO_APP_KEY"))
+        NidOAuth.shared.initialize(
+            appName: "walkit",
+            clientId: AppConfiguration.string(for: "NAVER_CLIENT_ID"),
+            clientSecret: AppConfiguration.string(for: "NAVER_CLIENT_SECRET"),
+            urlScheme: AppConfiguration.string(for: "NAVER_URL_SCHEME")
+        )
         NidOAuth.shared.setLoginBehavior(.appPreferredWithInAppBrowserFallback)
         
         FirebaseApp.configure()
@@ -135,15 +142,13 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         // FCM에 APNs 토큰 연결
         Messaging.messaging().apnsToken = deviceToken
 
-        let tokenString = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-        debugPrint("APNs deviceToken: \(tokenString)")
+        debugPrint("APNs device token registered")
 
         // APNs 토큰이 설정된 후 FCM 토큰 요청
         Messaging.messaging().token { token, error in
             if let error = error {
                 debugPrint("FCM token fetch after APNs set error: \(error)")
             } else {
-                debugPrint("FCM token after APNs set: \(token ?? "nil")")
                 if let token {
                     UserDefaults.standard.set(token, forKey: "fcmToken")
                     self.sendFCMTokenToServer(token: token)
@@ -160,8 +165,8 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
     
     // FCM 토큰 갱신/수신
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
-        debugPrint("messaging didReceiveRegistrationToken: \(fcmToken ?? "nil")")
         guard let token = fcmToken else { return }
+        debugPrint("FCM registration token updated")
         UserDefaults.standard.set(token, forKey: "fcmToken")
         sendFCMTokenToServer(token: token)
     }

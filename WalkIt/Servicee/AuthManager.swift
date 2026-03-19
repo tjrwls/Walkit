@@ -61,7 +61,6 @@ class AuthManager: AuthManagerProtocol, ObservableObject {
                         self?.isShowingProgress = true
                         do {
                             self?.authToken = try await self?.serverManager.login(with: "kakao", token: oauthToken?.accessToken ?? "")
-                            debugPrint("서버 토큰: \(self?.authToken?.accessToken ?? "")")
                             KeychainManager.shared.accessToken = self?.authToken?.accessToken ?? ""
                             KeychainManager.shared.refreshToken = self?.authToken?.refreshToken ?? ""
                             let result = await self?.isUsers()
@@ -92,7 +91,6 @@ class AuthManager: AuthManagerProtocol, ObservableObject {
                         self?.isShowingProgress = true
                         do {
                             self?.authToken = try await self?.serverManager.login(with: "kakao", token: oauthToken?.accessToken ?? "")
-                            debugPrint("서버 토큰: \(self?.authToken?.accessToken ?? "")")
                             KeychainManager.shared.accessToken = self?.authToken?.accessToken ?? ""
                             KeychainManager.shared.refreshToken = self?.authToken?.refreshToken ?? ""
                             let result = await self?.isUsers()
@@ -137,7 +135,6 @@ class AuthManager: AuthManagerProtocol, ObservableObject {
             } else {
                 self.isShowingProgress = true
                 self.authToken = try await self.serverManager.login(with: "naver", token: accessToken.tokenString)
-                debugPrint("서버 토큰: \(self.authToken?.accessToken ?? "")")
                 KeychainManager.shared.accessToken = self.authToken?.accessToken ?? ""
                 KeychainManager.shared.refreshToken = self.authToken?.refreshToken ?? ""
                 let result = await self.isUsers()
@@ -201,7 +198,6 @@ class AuthManager: AuthManagerProtocol, ObservableObject {
                 Task { @MainActor in
                     self.isShowingProgress = true
                     self.authToken = try await self.serverManager.login(with: "apple", token: idTokenString)
-                    debugPrint("서버 토큰: \(self.authToken?.accessToken ?? "")")
                     KeychainManager.shared.accessToken = self.authToken?.accessToken ?? ""
                     KeychainManager.shared.refreshToken = self.authToken?.refreshToken ?? ""
                     let result = await self.isUsers()
@@ -307,7 +303,6 @@ class AuthManager: AuthManagerProtocol, ObservableObject {
             throw NetworkError.unauthorized
         }
         
-        print("accessToken: \(accessToken)\nrfreshToken: \(refreshToken) ")
         self.authToken = try await serverManager.refreshToken(accessToken: accessToken, refreshToken: refreshToken)
         KeychainManager.shared.accessToken = self.authToken?.accessToken ?? ""
         KeychainManager.shared.refreshToken = self.authToken?.refreshToken ?? ""

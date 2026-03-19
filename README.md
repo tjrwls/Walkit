@@ -63,6 +63,9 @@ open WalkIt.xcworkspace
 ```xcconfig
 KAKAO_APP_KEY = your_kakao_native_app_key
 BASE_URL = https://your-api-server.example.com
+NAVER_CLIENT_ID = your_naver_client_id
+NAVER_CLIENT_SECRET = your_naver_client_secret
+NAVER_URL_SCHEME = com.example.walkit
 ```
 
 ## 5. 화면 미리보기
