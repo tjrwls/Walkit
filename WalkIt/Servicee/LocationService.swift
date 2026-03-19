@@ -10,7 +10,7 @@ import CoreLocation
 class LocationService : NSObject, CLLocationManagerDelegate {
     static let shared = LocationService()
     private let manager = CLLocationManager()
-    var completionHandler: ((CLLocationCoordinate2D) -> (Void))?
+    var completionHandler: ((CLLocation) -> (Void))?
     var failedHandler: (() -> Void)?
     var currentLocation: CLLocationCoordinate2D?
 
@@ -22,7 +22,7 @@ class LocationService : NSObject, CLLocationManagerDelegate {
         manager.distanceFilter = 10
     }
     
-    func setCompletionHandler(completion: @escaping ((CLLocationCoordinate2D) -> (Void))) {
+    func setCompletionHandler(completion: @escaping ((CLLocation) -> (Void))) {
         completionHandler = completion
     }
     
@@ -47,12 +47,11 @@ class LocationService : NSObject, CLLocationManagerDelegate {
     //위치 정보가 업데이트 될 때 호출되는 delegate 함수
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        guard location.horizontalAccuracy > 0,
-              location.horizontalAccuracy <= 50 else {
+        guard location.horizontalAccuracy > 0 else {
             return
         }
         currentLocation = location.coordinate
-        completionHandler?(location.coordinate)
+        completionHandler?(location)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

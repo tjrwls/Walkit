@@ -7,6 +7,20 @@ struct KakaoMapView: UIViewRepresentable {
     var walkRoutes: [WalkPointEntity]
     var onCoordinatorReady: ((KakaoMapCoordinator) -> Void)? = nil
 
+    private var smoothedCoordinates: [CLLocationCoordinate2D] {
+        let samples = walkRoutes
+            .sorted { $0.timestamp < $1.timestamp }
+            .map {
+                CoordinatePathSmoother.LocationSample(
+                    coordinate: CLLocationCoordinate2D(latitude: $0.latitude, longitude: $0.longitude),
+                    timestampMillis: $0.timestamp,
+                    accuracyMeters: $0.accuracy
+                )
+            }
+
+        return CoordinatePathSmoother.smoothPath(samples)
+    }
+
     func makeUIView(context: Self.Context) -> KMViewContainer {
         let view: KMViewContainer = KMViewContainer(frame: .zero)
         context.coordinator.createController(view)
@@ -20,14 +34,15 @@ struct KakaoMapView: UIViewRepresentable {
             latitude: LocationService.shared.currentLocation?.latitude ?? 37.49793238160498,
             longitude: LocationService.shared.currentLocation?.longitude ?? 127.02750263732479
         )
-        
-        if(walkRoutes.count > 0) {
-            mapPoins = self.walkRoutes.sorted { $0.timestamp < $1.timestamp }.map { MapPoint(longitude: $0.longitude, latitude: $0.latitude) }
-            coordinate = CLLocationCoordinate2D(
-                latitude: walkRoutes.first?.latitude ?? 37.49793238160498,
-                longitude: walkRoutes.first?.longitude ?? 127.02750263732479
-            )
 
+        if !smoothedCoordinates.isEmpty {
+            mapPoins = smoothedCoordinates.map {
+                MapPoint(longitude: $0.longitude, latitude: $0.latitude)
+            }
+            coordinate = CLLocationCoordinate2D(
+                latitude: smoothedCoordinates.first?.latitude ?? 37.49793238160498,
+                longitude: smoothedCoordinates.first?.longitude ?? 127.02750263732479
+            )
         } else {
             mapPoins = [MapPoint(longitude: coordinate.longitude, latitude: coordinate.latitude)]
         }

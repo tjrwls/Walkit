@@ -7,6 +7,7 @@ class WalkPointEntity: Object {
     @Persisted var latitude: Double = 0.0
     @Persisted var longitude: Double = 0.0
     @Persisted var timestamp: Int = 0
+    @Persisted var accuracy: Double? = nil
 }
 
 class WalkRecordEntity: Object {

@@ -1,13 +1,30 @@
-
-import RealmSwift
 import Foundation
+import RealmSwift
+internal import Realm
 
 class RealmManager {
     static let shared = RealmManager()
     let userManager = UserManager.shared
-    private init() {}
-    
+    private init() {
+        configureRealm()
+    }
+
+    private static let schemaVersion: UInt64 = 1
+
     private let realm = try! Realm()
+
+    private func configureRealm() {
+        Realm.Configuration.defaultConfiguration = Realm.Configuration(
+            schemaVersion: Self.schemaVersion,
+            migrationBlock: { migration, oldSchemaVersion in
+                if oldSchemaVersion < 1 {
+                    migration.enumerateObjects(ofType: WalkPointEntity.className()) { _, newObject in
+                        newObject?["accuracy"] = nil
+                    }
+                }
+            }
+        )
+    }
     
     // Create
     func addObject<T: Object>(_ object: T) {

@@ -4,25 +4,50 @@ import SwiftUI
 import CoreLocation
 
 struct CoordinatePathView: View {
-    let coords: [CLLocationCoordinate2D]
+    private let samples: [CoordinatePathSmoother.LocationSample]
+
+    init(coords: [CLLocationCoordinate2D]) {
+        self.samples = coords.map {
+            CoordinatePathSmoother.LocationSample(
+                coordinate: $0,
+                timestampMillis: nil,
+                accuracyMeters: nil
+            )
+        }
+    }
+
+    init(points: [WalkPoint]) {
+        self.samples = points.map {
+            CoordinatePathSmoother.LocationSample(
+                coordinate: CLLocationCoordinate2D(
+                    latitude: $0.latitude ?? 0.0,
+                    longitude: $0.longitude ?? 0.0
+                ),
+                timestampMillis: $0.timestampMillis,
+                accuracyMeters: $0.accuracyMeters
+            )
+        }
+    }
+
+    private var smoothedCoords: [CLLocationCoordinate2D] {
+        CoordinatePathSmoother.smoothPath(samples)
+    }
 
     var body: some View {
-        GeometryReader { geo in
+        GeometryReader { _ in
             Canvas { context, size in
-                guard coords.count > 1 else { return }
-                
-                // 1) 경계값 계산
-                let lats  = coords.map { $0.latitude }
-                let lons  = coords.map { $0.longitude }
+                let drawCoordinates = smoothedCoords
+                guard drawCoordinates.count > 1 else { return }
+
+                let lats = drawCoordinates.map { $0.latitude }
+                let lons = drawCoordinates.map { $0.longitude }
                 guard let minLat = lats.min(),
                       let maxLat = lats.max(),
                       let minLon = lons.min(),
-                      let maxLon = lons.max(),
-                      minLat != maxLat,
-                      minLon != maxLon else { return }
+                      let maxLon = lons.max() else { return }
 
-                let latSpan = maxLat - minLat
-                let lonSpan = maxLon - minLon
+                let latSpan = max(maxLat - minLat, 0.000_001)
+                let lonSpan = max(maxLon - minLon, 0.000_001)
 
                 let inset: CGFloat = 8
                 let drawRect = CGRect(x: inset,
@@ -30,11 +55,10 @@ struct CoordinatePathView: View {
                                       width: max(0, size.width  - inset * 2),
                                       height: max(0, size.height - inset * 2))
 
-                // 2) 경로 그리기
                 var path = Path()
-                for (index, coord) in coords.enumerated() {
+                for (index, coord) in drawCoordinates.enumerated() {
                     let xNorm = (coord.longitude - minLon) / lonSpan
-                    let yNorm = (coord.latitude  - minLat) / latSpan
+                    let yNorm = (coord.latitude - minLat) / latSpan
 
                     let x = drawRect.minX + xNorm * drawRect.width
                     let y = drawRect.minY + (1 - yNorm) * drawRect.height
@@ -50,30 +74,27 @@ struct CoordinatePathView: View {
 
                 context.stroke(path, with: .color(Color.white), style: StrokeStyle(lineWidth: 3, lineCap: .round, lineJoin: .round))
 
-                // 3) 출발점/도착점 표시
-                if let start = coords.first {
+                if let start = drawCoordinates.first {
                     let xNorm = (start.longitude - minLon) / lonSpan
                     let yNorm = (start.latitude - minLat) / latSpan
                     let x = drawRect.minX + xNorm * drawRect.width
                     let y = drawRect.minY + (1 - yNorm) * drawRect.height
-                    let startRect = CGRect(x: x-5, y: y-5, width: 10, height: 10)
+                    let startRect = CGRect(x: x - 5, y: y - 5, width: 10, height: 10)
                     context.fill(Path(ellipseIn: startRect), with: .color(.white))
                 }
 
-                if let end = coords.last {
+                if let end = drawCoordinates.last {
                     let xNorm = (end.longitude - minLon) / lonSpan
                     let yNorm = (end.latitude - minLat) / latSpan
                     let x = drawRect.minX + xNorm * drawRect.width
                     let y = drawRect.minY + (1 - yNorm) * drawRect.height
-                    let endRect = CGRect(x: x-5, y: y-5, width: 10, height: 10)
+                    let endRect = CGRect(x: x - 5, y: y - 5, width: 10, height: 10)
                     context.fill(Path(ellipseIn: endRect), with: .color(.white))
                 }
             }
         }
     }
 }
-
-
 
 struct CoordinatePathMockView: View {
     let sampleCoords: [CLLocationCoordinate2D] = [

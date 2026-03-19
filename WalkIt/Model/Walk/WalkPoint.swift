@@ -9,4 +9,5 @@ struct WalkPoint: Decodable {
      let latitude: Double?
      let longitude: Double?
      let timestampMillis: Int?
+     let accuracyMeters: Double?
 }

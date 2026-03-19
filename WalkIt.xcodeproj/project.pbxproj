@@ -58,9 +58,9 @@
 		086B7BB1AB313E2D5BA86D94 /* Pods-WalkIt-WalkItUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkIt-WalkItUITests.debug.xcconfig"; path = "Target Support Files/Pods-WalkIt-WalkItUITests/Pods-WalkIt-WalkItUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3381DE1B2270264FE50CE68D /* Pods-WalkIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkIt.release.xcconfig"; path = "Target Support Files/Pods-WalkIt/Pods-WalkIt.release.xcconfig"; sourceTree = "<group>"; };
 		36FD1D47FD301A516B044275 /* Pods-WalkItTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkItTests.release.xcconfig"; path = "Target Support Files/Pods-WalkItTests/Pods-WalkItTests.release.xcconfig"; sourceTree = "<group>"; };
-		5A0E00012F0D100000000001 /* WalkIt.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config/WalkIt.Debug.xcconfig"; sourceTree = SOURCE_ROOT; };
-		5A0E00022F0D100000000002 /* WalkIt.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config/WalkIt.Release.xcconfig"; sourceTree = SOURCE_ROOT; };
 		431A6DC820F53428EE0231B5 /* Pods_WalkItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalkItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0E00012F0D100000000001 /* Config/WalkIt.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config/WalkIt.Debug.xcconfig; sourceTree = SOURCE_ROOT; };
+		5A0E00022F0D100000000002 /* Config/WalkIt.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config/WalkIt.Release.xcconfig; sourceTree = SOURCE_ROOT; };
 		5D3204611754D77E93F45D3F /* Pods-WalkItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkItTests.debug.xcconfig"; path = "Target Support Files/Pods-WalkItTests/Pods-WalkItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		61E9FFAD2EE29981005194F5 /* WalkIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E9FFBA2EE29983005194F5 /* WalkItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +118,7 @@
 				Model/WeeklyMission.swift,
 				Protocol/AuthManagerProtocol.swift,
 				Servicee/AuthManager.swift,
+				Servicee/CoordinatePathSmoother.swift,
 				Servicee/ImageDownloader.swift,
 				Servicee/KeychainManager.swift,
 				Servicee/LocationService.swift,
@@ -404,6 +405,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61E517A22F6C1BE50078D826 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				5A0E00012F0D100000000001 /* Config/WalkIt.Debug.xcconfig */,
+				5A0E00022F0D100000000002 /* Config/WalkIt.Release.xcconfig */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		61E9FFA42EE29981005194F5 = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +423,7 @@
 				E7F7A3D6DFEFE741C1E1F8EB /* Frameworks */,
 				CF3F3AA8FDF3A9CC90EA5D16 /* Pods */,
 				61D1EF2A2F0C1DF300EB49BA /* WalkIt */,
+				61E517A22F6C1BE50078D826 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -914,7 +925,7 @@
 		};
 		61E9FFCF2EE29983005194F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A0E00012F0D100000000001 /* WalkIt.Debug.xcconfig */;
+			baseConfigurationReference = 5A0E00012F0D100000000001 /* Config/WalkIt.Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -965,7 +976,7 @@
 		};
 		61E9FFD02EE29983005194F5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A0E00022F0D100000000002 /* WalkIt.Release.xcconfig */;
+			baseConfigurationReference = 5A0E00022F0D100000000002 /* Config/WalkIt.Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

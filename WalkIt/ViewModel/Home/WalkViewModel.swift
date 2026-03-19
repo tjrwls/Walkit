@@ -193,8 +193,15 @@ class WalkViewModel: ObservableObject {
     func startWalk() {
         startTime = Int(Date().timeIntervalSince1970 * 1000)
         pedometerManager.startPedometerUpdates()
-        locationService.setCompletionHandler { [weak self] coordinate in
-            self?.points.append(WalkPoint(latitude: coordinate.latitude, longitude: coordinate.longitude, timestampMillis: Int(Date().timeIntervalSince1970)))
+        locationService.setCompletionHandler { [weak self] location in
+            self?.points.append(
+                WalkPoint(
+                    latitude: location.coordinate.latitude,
+                    longitude: location.coordinate.longitude,
+                    timestampMillis: Int(location.timestamp.timeIntervalSince1970 * 1000),
+                    accuracyMeters: location.horizontalAccuracy
+                )
+            )
         }
         locationService.configureLocationUpdates()
     }
@@ -328,6 +335,7 @@ class WalkViewModel: ObservableObject {
             walkPointEntity.latitude = point.latitude ?? 0.0
             walkPointEntity.longitude = point.longitude ?? 0.0
             walkPointEntity.timestamp = point.timestampMillis ?? 0
+            walkPointEntity.accuracy = point.accuracyMeters
             walkPoints.append(walkPointEntity)
         }
 
@@ -399,7 +407,7 @@ class WalkViewModel: ObservableObject {
     func saveImage() {
         if let uiImage = selectedImage {
             if let image = renderImage(size: CGSize(width: width, height: width), content: {
-                CoordinatePathView(coords: points.map {CLLocationCoordinate2D(latitude: $0.latitude ?? 0.0, longitude: $0.longitude ?? 0.0)})
+                CoordinatePathView(points: points)
                     .frame(width: width, height: width)
                     .background {
                         Image(uiImage: uiImage)
