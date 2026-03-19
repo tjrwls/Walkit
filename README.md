@@ -1,19 +1,25 @@
 # WalkIt
 
-WalkIt is an iOS walking companion app built with SwiftUI. It combines walking records, emotion tracking, character growth, and social features into a single experience.
+산책 기록, 감정 트래킹, 캐릭터 성장 요소를 결합한 SwiftUI 기반 iOS 앱입니다.
 
-## Overview
+## 1. 앱 한 줄 소개
 
-- Record walking activity and view route-based history
-- Track emotions before or after walking
-- Grow and customize a character with animation assets
-- Manage missions, goals, notifications, and my page settings
-- Support third-party login and push notifications
+WalkIt은 사용자의 산책 경로, 감정 변화, 캐릭터 성장 경험을 하나의 흐름으로 연결한 iOS 산책 동반 앱입니다.
 
-## Tech Stack
+## 2. 주요 기능
 
+- 산책 경로 기록 및 이동 기록 조회
+- 산책 전후 감정 선택 및 감정 기록 관리
+- 캐릭터 성장 및 커스터마이징
+- 목표, 미션, 알림, 마이페이지 관리
+- 카카오 및 네이버 로그인 지원
+- 푸시 알림 수신 및 처리
+
+## 3. 기술 스택
+
+- Swift
 - SwiftUI
-- MVVM-style screen structure
+- MVVM
 - CocoaPods
 - Swift Package Manager
 - Kakao Maps SDK
@@ -24,143 +30,105 @@ WalkIt is an iOS walking companion app built with SwiftUI. It combines walking r
 - Lottie
 - Kingfisher
 - Alamofire
+- CoreLocation
+- CMPedometer
 
-## Project Structure
+## 4. 실행 방법
 
-```text
-WalkIt 4/
-├── Config/                  # Local/build configuration
-├── WalkIt/                  # App source
-│   ├── Model/               # Domain models
-│   ├── Protocol/            # Protocol definitions
-│   ├── Servicee/            # Shared services and managers
-│   ├── View/                # SwiftUI screens and reusable UI
-│   ├── ViewModel/           # Screen view models
-│   ├── Assets.xcassets/     # Images and app assets
-│   └── LottieJson/          # Lottie animation files
-├── WalkItTests/             # Unit tests
-├── WalkItUITests/           # UI tests
-├── Podfile
-└── WalkIt.xcworkspace
-```
+### 개발 환경
 
-## Features
+- Xcode 16 이상 권장
+- iOS 16.0 이상 권장
+- CocoaPods 설치 필요
 
-### Authentication
-
-- Kakao login
-- Naver login
-- Sign up flow and onboarding screens
-
-### Walking
-
-- Walking screen and walking record history
-- Route visualization with Kakao Maps
-- Step-related data handling
-
-### Character
-
-- Animated character rendering with Lottie
-- Dressing room and item-based customization
-
-### User
-
-- My page
-- Goal management
-- Mission management
-- Notification settings
-
-## Requirements
-
-- Xcode 16 or later recommended
-- iOS 16.0 or later recommended
-- CocoaPods installed
-
-## Getting Started
-
-1. Clone the repository.
-2. Install CocoaPods dependencies.
-3. Open the workspace file in Xcode.
-4. Add the required local configuration files.
-5. Build and run on a simulator or physical device.
+### 실행 준비
 
 ```bash
 git clone <your-repo-url>
 cd WalkIt
 pod install
+cp Config/Secrets.example.xcconfig Config/Secrets.xcconfig
 open WalkIt.xcworkspace
 ```
 
-## Local Configuration
+### 로컬 설정
 
-This project uses local secrets and service configuration that should not be committed.
+아래 파일은 로컬에서 직접 추가해야 하며 Git에는 포함되지 않습니다.
 
-### Required files
-
-- `WalkIt/GoogleService-Info.plist`
 - `Config/Secrets.xcconfig`
+- `WalkIt/GoogleService-Info.plist`
 
-### Recommended approach
+`Config/Secrets.xcconfig`에는 예를 들어 아래 값이 필요합니다.
 
-- Keep real keys out of Git
-- Copy `Config/Secrets.example.xcconfig` to `Config/Secrets.xcconfig`
-- Add sample placeholders or document the required keys separately
-- Share actual configuration files only through a secure channel
-
-Example:
-
-```bash
-cp Config/Secrets.example.xcconfig Config/Secrets.xcconfig
+```xcconfig
+KAKAO_APP_KEY = your_kakao_native_app_key
+BASE_URL = https://your-api-server.example.com
 ```
 
-## Dependencies
+## 5. 화면 미리보기
 
-### CocoaPods
+아래 경로에 스크린샷을 추가하면 README에서 바로 표시할 수 있습니다.
 
-- `KakaoMapsSDK 2.12.0`
+- `docs/screenshots/login.png`
+- `docs/screenshots/home.png`
+- `docs/screenshots/walking.png`
+- `docs/screenshots/record.png`
+- `docs/screenshots/character.png`
+- `docs/screenshots/mypage.png`
 
-### Swift Package Manager
+| Login | Home | Walking |
+|---|---|---|
+| ![Login](./docs/screenshots/login.png) | ![Home](./docs/screenshots/home.png) | ![Walking](./docs/screenshots/walking.png) |
 
-- Firebase iOS SDK
-- Kakao iOS SDK
-- Naver Login SDK
-- Realm Swift
-- Lottie
-- Kingfisher
-- Alamofire
+| Record | Character | My Page |
+|---|---|---|
+| ![Record](./docs/screenshots/record.png) | ![Character](./docs/screenshots/character.png) | ![My Page](./docs/screenshots/mypage.png) |
 
-## Git Ignore Notes
+## 6. 트러블슈팅 / 구현 포인트
 
-The repository is configured to exclude:
+- `Info.plist`에 직접 넣던 SDK 키를 `xcconfig`로 분리해 민감 정보가 Git에 포함되지 않도록 구성했습니다.
+- `Kakao Maps SDK`를 사용해 산책 경로를 지도 위에 시각화했습니다.
+- `CoreLocation`과 걸음 수 데이터를 활용해 산책 기록 흐름을 구성했습니다.
+- `Firebase Messaging`을 이용해 푸시 알림 수신과 포그라운드 알림 처리를 구현했습니다.
+- `Realm`을 사용해 산책 기록, 미션 상태 등 로컬 데이터를 관리했습니다.
+- `Lottie`를 사용해 캐릭터 성장 및 커스터마이징 화면의 애니메이션 표현을 구현했습니다.
+
+## 7. 아키텍처
+
+이 프로젝트는 MVVM 스타일 구조를 기반으로 구성했습니다.
+
+- `View`: SwiftUI 화면 및 UI 구성
+- `ViewModel`: 화면 상태 관리와 프레젠테이션 로직 담당
+- `Model`: 도메인 모델, 응답 모델, 라우팅 정의
+- `Servicee`: 인증, 네트워크, 위치, 알림, 로컬 저장소 처리
+- `Component`: 공통 UI 컴포넌트 및 재사용 뷰
+
+## 8. 프로젝트 구조
+
+```text
+WalkIt/
+├── Config/
+├── WalkIt/
+│   ├── Model/
+│   ├── Protocol/
+│   ├── Servicee/
+│   ├── View/
+│   ├── ViewModel/
+│   ├── Assets.xcassets/
+│   └── LottieJson/
+├── WalkItTests/
+├── WalkItUITests/
+├── Podfile
+└── WalkIt.xcworkspace
+```
+
+## 9. 참고 사항
+
+저장소에는 아래 항목이 포함되지 않습니다.
 
 - `Pods/`
 - `xcuserdata/`
 - `*.xcuserstate`
-- `GoogleService-Info.plist`
 - `Config/Secrets.xcconfig`
-- Derived/build artifacts
-
-If another developer clones the project, they should run:
-
-```bash
-pod install
-```
-
-## Screens
-
-- Login / Sign Up
-- Home
-- Walking
-- Walking Record
-- Character Shop / Dressing Room
-- My Page
-
-## Roadmap
-
-- Improve test coverage
-- Add clearer environment setup for third-party services
-- Add screenshots and demo GIFs
-
-## License
-
-No license has been specified yet.
+- `WalkIt/GoogleService-Info.plist`
+- 빌드 산출물
