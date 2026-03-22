@@ -15,25 +15,34 @@ WalkIt은 사용자의 산책 경로, 감정 변화, 캐릭터 성장 경험을 
 - 카카오 및 네이버 로그인 지원
 - 푸시 알림 수신 및 처리
 
-## 3. 기술 스택
+## 3. 프로젝트 구조
 
-- Swift
-- SwiftUI
-- MVVM
-- CocoaPods
-- Swift Package Manager
-- Kakao Maps SDK
-- Kakao Login SDK
-- Naver Login SDK
-- Firebase Messaging
-- Realm
-- Lottie
-- Kingfisher
-- Alamofire
-- CoreLocation
-- CMPedometer
+```text
+WalkIt/
+├── Config/
+├── WalkIt/
+│   ├── Model/
+│   ├── Protocol/
+│   ├── Servicee/
+│   ├── View/
+│   ├── ViewModel/
+│   ├── Assets.xcassets/
+│   └── LottieJson/
+├── WalkItTests/
+├── WalkItUITests/
+├── Podfile
+└── WalkIt.xcworkspace
+```
 
-## 4. 실행 방법
+## 4. 기술 스택
+
+- 언어/UI: Swift, SwiftUI
+- 의존성 관리: CocoaPods, Swift Package Manager
+- 지도/로그인 SDK: Kakao Maps SDK, Kakao Login SDK, Naver Login SDK
+- 데이터/알림: Firebase Messaging, Realm
+- 기타 라이브러리 및 프레임워크: Lottie, Kingfisher, Alamofire, CoreLocation, CMPedometer
+
+## 5. 실행 방법
 
 ### 개발 환경
 
@@ -68,16 +77,7 @@ NAVER_CLIENT_SECRET = your_naver_client_secret
 NAVER_URL_SCHEME = com.example.walkit
 ```
 
-## 5. 화면 미리보기
-
-아래 경로에 스크린샷을 추가하면 README에서 바로 표시할 수 있습니다.
-
-- `docs/screenshots/login.png`
-- `docs/screenshots/home.png`
-- `docs/screenshots/walking.png`
-- `docs/screenshots/record.png`
-- `docs/screenshots/character.png`
-- `docs/screenshots/mypage.png`
+## 6. 화면 미리보기
 
 | Login | Home | Walking |
 |---|---|---|
@@ -87,16 +87,15 @@ NAVER_URL_SCHEME = com.example.walkit
 |---|---|---|
 | ![Record](./docs/screenshots/record.png) | ![Character](./docs/screenshots/character.png) | ![My Page](./docs/screenshots/mypage.png) |
 
-## 6. 트러블슈팅 / 구현 포인트
+## 7. 트러블슈팅 / 구현 포인트
 
-- `Info.plist`에 직접 넣던 SDK 키를 `xcconfig`로 분리해 민감 정보가 Git에 포함되지 않도록 구성했습니다.
 - `Kakao Maps SDK`를 사용해 산책 경로를 지도 위에 시각화했습니다.
 - `CoreLocation`과 걸음 수 데이터를 활용해 산책 기록 흐름을 구성했습니다.
 - `Firebase Messaging`을 이용해 푸시 알림 수신과 포그라운드 알림 처리를 구현했습니다.
 - `Realm`을 사용해 산책 기록, 미션 상태 등 로컬 데이터를 관리했습니다.
 - `Lottie`를 사용해 캐릭터 성장 및 커스터마이징 화면의 애니메이션 표현을 구현했습니다.
 
-## 7. 아키텍처
+## 8. 아키텍처
 
 이 프로젝트는 MVVM 스타일 구조를 기반으로 구성했습니다.
 
@@ -105,25 +104,6 @@ NAVER_URL_SCHEME = com.example.walkit
 - `Model`: 도메인 모델, 응답 모델, 라우팅 정의
 - `Servicee`: 인증, 네트워크, 위치, 알림, 로컬 저장소 처리
 - `Component`: 공통 UI 컴포넌트 및 재사용 뷰
-
-## 8. 프로젝트 구조
-
-```text
-WalkIt/
-├── Config/
-├── WalkIt/
-│   ├── Model/
-│   ├── Protocol/
-│   ├── Servicee/
-│   ├── View/
-│   ├── ViewModel/
-│   ├── Assets.xcassets/
-│   └── LottieJson/
-├── WalkItTests/
-├── WalkItUITests/
-├── Podfile
-└── WalkIt.xcworkspace
-```
 
 ## 9. 참고 사항
 
