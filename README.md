@@ -6,6 +6,8 @@
 
 WalkIt은 사용자의 산책 경로, 감정 변화, 캐릭터 성장 경험을 하나의 흐름으로 연결한 iOS 산책 동반 앱입니다.
 
+[앱 다운로드하기](https://apps.apple.com/kr/app/%EC%9B%8C%ED%82%B7-walk-it/id6757227607)
+
 ## 2. 주요 기능
 
 - 산책 경로 기록 및 이동 기록 조회
@@ -104,14 +106,3 @@ NAVER_URL_SCHEME = com.example.walkit
 - `Model`: 도메인 모델, 응답 모델, 라우팅 정의
 - `Servicee`: 인증, 네트워크, 위치, 알림, 로컬 저장소 처리
 - `Component`: 공통 UI 컴포넌트 및 재사용 뷰
-
-## 9. 참고 사항
-
-저장소에는 아래 항목이 포함되지 않습니다.
-
-- `Pods/`
-- `xcuserdata/`
-- `*.xcuserstate`
-- `Config/Secrets.xcconfig`
-- `WalkIt/GoogleService-Info.plist`
-- 빌드 산출물
